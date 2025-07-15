@@ -1,0 +1,222 @@
+:root {
+  --main-gradient: linear-gradient(120deg, #fff6e3 0%, #e3eaff 100%);
+  --accent: #ff8fcf;
+  --primary: #6ec1e4;
+  --radius: 16px;
+  --shadow: 0 4px 16px rgba(0,0,0,0.07);
+  --font-catch: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+  --font-main: 'Noto Sans JP', sans-serif;
+}
+body, html, #root, .admin-bg {
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--main-gradient);
+}
+.admin-header {
+  text-align: center;
+  padding: 2.2rem 1rem 1.2rem 1rem;
+}
+.admin-header h1 {
+  font-family: var(--font-catch);
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.6em;
+}
+.search-input {
+  padding: 0.7em 1.2em;
+  border-radius: 1.5em;
+  border: 1px solid #c1e1ff;
+  font-size: 1em;
+  width: 270px;
+  margin-bottom: 1.5em;
+}
+.job-form-section {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 440px;
+  margin: 0 auto 2.2em auto;
+  padding: 2em 2em 1.2em 2em;
+}
+.job-form h2 {
+  margin-top: 0;
+  color: var(--primary);
+  font-family: var(--font-catch);
+  font-size: 1.2rem;
+}
+.job-form .input {
+  width: 100%;
+  margin-bottom: 0.9em;
+  padding: 0.7em 1em;
+  border-radius: 1em;
+  border: 1px solid #e3eaff;
+  font-size: 1em;
+  background: #f7faff;
+}
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+label {
+  margin-right: 1.2em;
+  font-size: 0.98em;
+}
+.form-btns {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+}
+.save-btn, .draft-btn, .cancel-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 1.5em;
+  padding: 0.5em 1.5em;
+  font-weight: 700;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.16s, opacity 0.16s;
+}
+.save-btn:hover, .draft-btn:hover, .cancel-btn:hover {
+  opacity: 0.85;
+}
+.job-list-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.job-list-section h2 {
+  color: var(--primary);
+  font-family: var(--font-catch);
+  font-size: 1.1rem;
+}
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2em;
+  justify-content: center;
+}
+.job-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 340px;
+  padding: 1.2em 1.2em 1.2em 1.2em;
+  margin-bottom: 1.2em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.job-card.priority {
+  border: 2px solid var(--accent);
+  box-shadow: 0 6px 24px rgba(255,143,207,0.10), var(--shadow);
+}
+.job-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.3em;
+}
+.job-title {
+  font-family: var(--font-catch);
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+.priority-badge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 1em;
+  font-size: 0.85em;
+  padding: 0.1em 0.7em;
+  font-weight: 700;
+}
+.published-badge {
+  background: #6ec1e4;
+  color: #fff;
+  border-radius: 1em;
+  font-size: 0.85em;
+  padding: 0.1em 0.7em;
+  font-weight: 700;
+}
+.draft-badge {
+  background: #bbb;
+  color: #fff;
+  border-radius: 1em;
+  font-size: 0.85em;
+  padding: 0.1em 0.7em;
+  font-weight: 700;
+}
+.job-tags {
+  display: flex;
+  gap: 0.4em;
+  flex-wrap: wrap;
+  margin-bottom: 0.2em;
+}
+.job-tag {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 1em;
+  padding: 0.13em 0.8em;
+  font-size: 0.92em;
+  font-weight: 600;
+}
+.job-desc {
+  color: #444;
+  font-size: 0.98em;
+  margin-bottom: 0.5em;
+}
+.job-actions {
+  display: flex;
+  gap: 0.5em;
+}
+.edit-btn, .priority-btn, .publish-btn, .delete-btn {
+  background: #f7faff;
+  color: var(--primary);
+  border: 1px solid #e3eaff;
+  border-radius: 1.2em;
+  font-size: 0.97em;
+  font-weight: 700;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: background 0.14s, color 0.14s;
+}
+.edit-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+.priority-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.publish-btn:hover {
+  background: #6ec1e4;
+  color: #fff;
+}
+.delete-btn {
+  background: #fff0f0;
+  color: #ff8a8a;
+  border: 1px solid #ffd3d3;
+}
+.delete-btn:hover {
+  background: #ff8a8a;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .job-list {
+    flex-direction: column;
+    gap: 0.7em;
+    max-width: 98vw;
+  }
+  .job-card {
+    width: 97vw;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+  .admin-header {
+    padding: 1.2rem 0.3rem 0.7rem 0.3rem;
+  }
+  .job-form-section {
+    padding: 1.1em 0.6em 0.6em 0.6em;
+  }
+}
